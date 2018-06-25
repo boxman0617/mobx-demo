@@ -15,26 +15,6 @@ class Store {
   }
 
   @computed
-  get hoursProgress() {
-    return (parseInt(this.hours) / 24) * 100;
-  }
-
-  @computed
-  get minutesProgress() {
-    return (parseInt(this.minutes) / 60) * 100;
-  }
-
-  @computed
-  get secondsProgress() {
-    return (parseInt(this.seconds) / 60) * 100;
-  }
-
-  @computed
-  get milliProgress() {
-    return (parseInt(this.milli) / 1000) * 100;
-  }
-
-  @computed
   get hours() {
     return pad(this.toDate.getUTCHours().toString());
   }
@@ -67,6 +47,26 @@ class Store {
   @computed
   get milliHundreds() {
     return this.milli.substr(0, 1);
+  }
+
+  @computed
+  get hoursProgress() {
+    return (parseInt(this.hours) / 24) * 100;
+  }
+
+  @computed
+  get minutesProgress() {
+    return (parseInt(this.minutes) / 60) * 100;
+  }
+
+  @computed
+  get secondsProgress() {
+    return (parseInt(this.seconds) / 60) * 100;
+  }
+
+  @computed
+  get milliProgress() {
+    return (parseInt(this.milli) / 1000) * 100;
   }
 
   constructor(isServer, lastUpdate, interval = 1000) {
