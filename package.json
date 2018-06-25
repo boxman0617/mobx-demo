@@ -1,0 +1,26 @@
+{
+  "name": "with-mobx",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "pretty": "prettier --single-quote --trailing-comma es5 --write \"{components,lib,pages,stores}/**/*.js\""
+  },
+  "dependencies": {
+    "global": "^4.3.2",
+    "mobx": "5.0.3",
+    "mobx-react": "5.2.3",
+    "next": "^6.0.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "styled-components": "^3.3.3"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "prettier": "^1.13.5"
+  }
+}
